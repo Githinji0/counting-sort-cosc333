@@ -91,34 +91,8 @@ TEST COMPLETED SUCCESSFULLY!
 ```
 
 
-```java
-// Example 1: Simple array
-int[] arr = {4, 2, 2, 8, 3, 3, 1};
-int[] sorted = CountingSort.countingSort(arr);
-// Result: [1, 2, 2, 3, 3, 4, 8]
 
-// Example 2: With known max value (more efficient)
-int[] arr2 = {5, 2, 9, 1, 5, 6};
-int[] sorted2 = CountingSort.countingSort(arr2, 9);
-// Result: [1, 2, 5, 5, 6, 9]
-```
 
-### Advanced Usage
-
-```java
-// Generate and sort large dataset
-int[] data = new int[1_000_000];
-Random random = new Random();
-for (int i = 0; i < data.length; i++) {
-    data[i] = random.nextInt(1000);
-}
-
-// Sort with known max value
-int[] sorted = CountingSort.countingSort(data, 999);
-
-// Verify result
-boolean isValid = CountingSort.isSorted(sorted);
-```
 
 ## 📊 Comparison with Other Algorithms
 
