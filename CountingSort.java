@@ -1,15 +1,4 @@
-/**
- * Counting Sort Algorithm Implementation
- * 
- * Counting Sort is a non-comparison based sorting algorithm that works by
- * counting the number of objects having distinct key values.
- * 
- * Time Complexity: O(n + k) where n is the number of elements and k is the range
- * Space Complexity: O(k) for the counting array
- * 
- * Best Use Case: When the range of input data (k) is not significantly greater than
- * the number of elements to be sorted (n).
- */
+
 public class CountingSort {
     
     /**
@@ -29,14 +18,12 @@ public class CountingSort {
             count[arr[i]]++;
         }
         
-        // Change count[i] so that count[i] contains actual
-        // position of this element in output array
+      
         for (int i = 1; i <= maxValue; i++) {
             count[i] += count[i - 1];
         }
         
-        // Build the output array
-        // Iterate from right to left to maintain stability
+
         for (int i = arr.length - 1; i >= 0; i--) {
             output[count[arr[i]] - 1] = arr[i];
             count[arr[i]]--;
@@ -56,7 +43,7 @@ public class CountingSort {
             return arr;
         }
         
-        // Find the maximum value in the array
+  
         int maxValue = arr[0];
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] > maxValue) {
